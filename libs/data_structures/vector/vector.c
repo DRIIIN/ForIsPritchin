@@ -1,17 +1,18 @@
 #include "vector.h"
 
+void errorMemory() {
+    fprintf(stderr, "bad alloc");
+    exit(1);
+}
+
 vector createVector(size_t n) {
     int* a = (int*) malloc(sizeof(int) * n);
 
     if (a == NULL) {
-        fprintf(stderr, "bad alloc");
-        exit(1);
+        errorMemory();
     }
 
-    vector v = {NULL, 0, n};
-    if (n) {
-        v.data = a;
-    }
+    vector v = {n ? a : NULL, 0, n};
 
     return v;
 }
@@ -26,8 +27,7 @@ void reserve(vector *v, size_t newCapacity) {
         v->data = (int*) realloc(v->data, sizeof(v->data[0]) * newCapacity);
         v->capacity = newCapacity;
         if (v->data == NULL) {
-            fprintf(stderr, "bad alloc");
-            exit(1);
+            errorMemory();
         }
     }
     else if (newCapacity < v->capacity) {
@@ -74,8 +74,7 @@ void pushBack(vector *v, int x) {
 
 void popBack(vector *v) {
     if (v->size == 0) {
-        fprintf(stderr, "bad alloc");
-        exit(1);
+        errorMemory();
     }
     v->size--;
 }
