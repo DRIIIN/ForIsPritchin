@@ -7,6 +7,7 @@ add_executable(ForIsPritchin main.c)
 
 add_library(data_structures
         libs/data_structures/vector/vector.c
+        libs/data_structures/vector/vectorVoid.c
 )
 
 target_link_libraries(ForIsPritchin data_structures)

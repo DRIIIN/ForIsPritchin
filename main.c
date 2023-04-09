@@ -1,4 +1,5 @@
 #include "libs/data_structures/vector/vector.h"
+#include "libs/data_structures/vector/vectorVoid.h"
 
 void test_pushBack_emptyVector() {
     vector v = createVector(5);
@@ -82,6 +83,8 @@ void test() {
 
 int main() {
     test();
+
+    vectorVoid v = {(void*) malloc(4 * 5), 2, 5, 4};
 
     return 0;
 }
