@@ -1,3 +1,4 @@
 C:/Users/pavel/CLionProjects/ForIsPritchin/cmake-build-debug/CMakeFiles/ForIsPritchin.dir
+C:/Users/pavel/CLionProjects/ForIsPritchin/cmake-build-debug/CMakeFiles/data_structures.dir
 C:/Users/pavel/CLionProjects/ForIsPritchin/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/pavel/CLionProjects/ForIsPritchin/cmake-build-debug/CMakeFiles/rebuild_cache.dir
